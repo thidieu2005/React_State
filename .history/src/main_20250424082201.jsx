@@ -13,6 +13,6 @@ import CGetdtAPI from './CGetdtAPI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CGetdtAPI />
+    <FGetdtAPI />
   </StrictMode>,
 )
