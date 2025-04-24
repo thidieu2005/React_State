@@ -11,7 +11,7 @@ import State_getData1 from './State_getData.jsx'
 import FGetdtAPI from './FGetdtAPI.jsx'
 import CGetdtAPI from './CGetdtAPI.jsx'
 import CaxiosAPI from './axios/CaxiosAPI.jsx'
-import FuaxiosAPI from './axios/FuaxiosAPI.jsx'
+import FuaxiosAPI from './axios/FaxiosAPI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
