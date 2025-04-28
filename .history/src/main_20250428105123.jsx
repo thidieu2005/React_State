@@ -15,6 +15,6 @@ import FuaxiosAPI from './axios/FuaxiosAPI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    < CGetdtAPI />
+    <State_getData />
   </StrictMode>,
 )

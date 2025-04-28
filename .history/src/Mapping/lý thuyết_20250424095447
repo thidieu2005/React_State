@@ -1,0 +1,91 @@
+Hàm	        Dùng để làm gì?     	                Kết quả trả về
+map()	    Biến đổi từng phần tử	                Mảng mới
+filter()	Giữ lại những phần tử thỏa điều kiện	Mảng mới
+reduce()	Gộp mảng thành một giá trị duy nhất	    Số, chuỗi, object, v.v.
+
+import React from 'react';
+
+const CartComponent = () => {
+  const cart = [
+    { id: 1, name: 'Áo thun', price: 200000, quantity: 2 },
+    { id: 2, name: 'Quần jean', price: 400000, quantity: 1 },
+    { id: 3, name: 'Mũ lưỡi trai', price: 150000, quantity: 3 }
+  ];
+
+  // 1. Lọc sản phẩm có số lượng >= 2
+  const filteredCart = cart.filter(item => item.quantity >= 2);
+
+  // 2. Tính tổng tiền
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
+  return (
+    <div>
+      <h2>🛒 Sản phẩm trong giỏ (>= 2 cái):</h2>
+      <ul>
+        {filteredCart.map(item => (
+          <li key={item.id}>
+            {item.name} - SL: {item.quantity} - Giá: {item.price.toLocaleString()}đ
+          </li>
+        ))}
+      </ul>
+
+      <h3>💰 Tổng tiền: {totalPrice.toLocaleString()}đ</h3>
+    </div>
+  );
+};
+
+export default CartComponent;
+
+
+ Giải thích từng phần:
+🔹 filter(): lọc những item có số lượng >= 2
+js
+Sao chép mã
+const filteredCart = cart.filter(item => item.quantity >= 2);
+Kết quả filteredCart là:
+
+js
+Sao chép mã
+[
+  { id: 1, name: 'Áo thun', price: 200000, quantity: 2 },
+  { id: 3, name: 'Mũ lưỡi trai', price: 150000, quantity: 3 }
+]
+Chỉ giữ lại những sản phẩm có từ 2 cái trở lên.
+
+🔹 map(): hiển thị danh sách sản phẩm đã lọc
+js
+Sao chép mã
+{filteredCart.map(item => (
+  <li key={item.id}>
+    {item.name} - SL: {item.quantity} - Giá: {item.price.toLocaleString()}đ
+  </li>
+))}
+Mỗi item trong filteredCart được hiển thị thành một dòng danh sách <li>. Dùng .map() để tạo ra JSX tương ứng cho từng phần tử.
+
+🔹 reduce(): tính tổng tiền
+js
+Sao chép mã
+const totalPrice = cart.reduce((total, item) => {
+  return total + item.price * item.quantity;
+}, 0);
+Lặp từng sản phẩm
+
+Nhân price * quantity
+
+Cộng vào tổng (total)
+
+Kết quả:
+
+js
+Sao chép mã
+200000 * 2 + 400000 * 1 + 150000 * 3 = 400000 + 400000 + 450000 = 1.250.000đ
+✅ Kết quả hiển thị:
+diff
+Sao chép mã
+🛒 Sản phẩm trong giỏ (>= 2 cái):
+- Áo thun - SL: 2 - Giá: 200,000đ
+- Mũ lưỡi trai - SL: 3 - Giá: 150,000đ
+
+💰 Tổng tiền: 1,250,000đ

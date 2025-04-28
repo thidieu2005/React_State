@@ -37,7 +37,7 @@ function FuaxiosAPI() {
             <img
               src={item.avatar || 'https://via.placeholder.com/100'}
               alt={item.name}
-              style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '8px',boder: '1px solid #ddd' }}
+              style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '8px',bo }}
             />
             <p><strong>{item.name}</strong></p>
             <p>Mô tả: {item.description || 'Không có'}</p>

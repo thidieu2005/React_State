@@ -1,46 +1,13 @@
-// import React, { Component } from 'react';
-// import { getStudents } from './data';
-// import './App.css';
-// class State_getData extends Component{
-//     constructor(props) {
-//         super(props);
-//         var arr = getStudents();
-//         this.state = {arr, };
-//     }
-//    render() {
-//     return (
-//         <div className="container">
-//             {this.state.arr.map((student, index) => (
-//                 <div className="student-card" key={index}>
-//                     <h2>{student.name}</h2>
-//                     <h2>Tuổi: {student.age}</h2>
-//                     <h2>Gender: {student.gender}</h2>
-//                     <h2>Major: {student.major}</h2>
-//                     <h2>Email: {student.email}</h2>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// }
-
-// }
-// export default State_getData;
-//======>>>>> get data từ file sd map
-
 import React, { Component } from 'react';
 import { getStudents } from './data';
 import './App.css'; 
-
-class State_getData extends Component {
+class State_getData extends Component{
     constructor(props) {
         super(props);
         var arr = getStudents();
-        this.state = {
-            arr,
-            filterGender: 'All', // All, Nam, Nữ
+        this.state = {arr,  filterGender: 'All', // All, Nam, Nữ
             filterAge: 'All',     // All, >20, <=20
-            filterMajor: 'All'
-        };
+            filterMajor: 'All'};
     }
     
     handleGenderFilter = (e) => {
@@ -65,13 +32,19 @@ class State_getData extends Component {
             return genderMatch && ageMatch && majorMatch;
         });
     }
-
-    render() {
-        const filteredStudents = this.getFilteredStudents(); // thêm dòng này để lấy danh sách đã lọc
-        
-        return (
-            <div className="container">
-                {/* Filter */}
+   render() {
+    return (
+        <div className="container">
+            {this.state.arr.map((student, index) => (
+                <div className="student-card" key={index}>
+                    <h2>{student.name}</h2>
+                    <h2>Tuổi: {student.age}</h2>
+                    <h2>Gender: {student.gender}</h2>
+                    <h2>Major: {student.major}</h2>
+                    <h2>Email: {student.email}</h2>
+                </div>
+            ))}
+               {/* Filter */}
                 <div className="filters">
                     <select onChange={this.handleGenderFilter}>
                         <option value="All">Tất cả giới tính</option>
@@ -109,9 +82,9 @@ class State_getData extends Component {
                     ))}
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
+}
 export default State_getData;
-//=====>>>>>> get data từ file sd map và filterfilter

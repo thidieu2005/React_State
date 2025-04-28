@@ -1,0 +1,39 @@
+Hàm	        Dùng để làm gì?     	                Kết quả trả về
+map()	    Biến đổi từng phần tử	                Mảng mới
+filter()	Giữ lại những phần tử thỏa điều kiện	Mảng mới
+reduce()	Gộp mảng thành một giá trị duy nhất	    Số, chuỗi, object, v.v.
+
+import React from 'react';
+
+const CartComponent = () => {
+  const cart = [
+    { id: 1, name: 'Áo thun', price: 200000, quantity: 2 },
+    { id: 2, name: 'Quần jean', price: 400000, quantity: 1 },
+    { id: 3, name: 'Mũ lưỡi trai', price: 150000, quantity: 3 }
+  ];
+
+  // 1. Lọc sản phẩm có số lượng >= 2
+  const filteredCart = cart.filter(item => item.quantity >= 2);
+
+  // 2. Tính tổng tiền
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
+  return (
+    <div>
+      <h2>🛒 Sản phẩm trong giỏ (>= 2 cái):</h2>
+      <ul>
+        {filteredCart.map(item => (
+          <li key={item.id}>
+            {item.name} - SL: {item.quantity} - Giá: {item.price.toLocaleString()}đ
+          </li>
+        ))}
+      </ul>
+
+      <h3>💰 Tổng tiền: {totalPrice.toLocaleString()}đ</h3>
+    </div>
+  );
+};
+
+export default CartComponent;

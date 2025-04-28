@@ -1,0 +1,4 @@
+Hàm	Dùng để làm gì?	Kết quả trả về
+map()	Biến đổi từng phần tử	Mảng mới
+filter()	Giữ lại những phần tử thỏa điều kiện	Mảng mới
+reduce()	Gộp mảng thành một giá trị duy nhất	Số, chuỗi, object, v.v.

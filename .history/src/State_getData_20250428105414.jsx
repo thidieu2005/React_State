@@ -114,4 +114,4 @@ class State_getData extends Component {
 }
 
 export default State_getData;
-//=====>>>>>> get data từ file sd map và filterfilter
+//=====>>>>>> get data từ file sd map

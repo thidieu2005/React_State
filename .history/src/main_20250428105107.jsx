@@ -7,7 +7,7 @@ import Dientich_hcn from './Dientich_hcn.jsx'
 // import Counter from './Counter.jsx'
 import CounterFunction from './Counter_function.jsx'
 import S_hcn from './S_hnc.jsx'
-import State_getData from './State_getData.jsx'
+import State_getData1= from './State_getData.jsx'
 import FGetdtAPI from './FGetdtAPI.jsx'
 import CGetdtAPI from './CGetdtAPI.jsx'
 import CaxiosAPI from './axios/CaxiosAPI.jsx'
@@ -15,6 +15,6 @@ import FuaxiosAPI from './axios/FuaxiosAPI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    < CGetdtAPI />
+    <FuaxiosAPI />
   </StrictMode>,
 )

@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+// import React,{Component} from 'react';
 
 // export class CGetdtAPI extends Component {
 //   constructor(props) {
