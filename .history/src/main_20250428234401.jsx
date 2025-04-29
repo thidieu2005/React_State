@@ -14,9 +14,9 @@ import CaxiosAPI from './axios/CaxiosAPI.jsx'
 import FuaxiosAPI from './axios/FuaxiosAPI.jsx'
 import MyForm from './Form/form1.jsx'
 import { DiemTB } from './Form/diem.jsx'
-import SimpleMenu from './Form/checkbox.jsx'
+im
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <  SimpleMenu />
+    <  DiemTB />
   </StrictMode>,
 )

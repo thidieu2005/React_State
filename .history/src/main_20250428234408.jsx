@@ -17,6 +17,6 @@ import { DiemTB } from './Form/diem.jsx'
 import SimpleMenu from './Form/checkbox.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <  SimpleMenu />
+    <  DiemTB />
   </StrictMode>,
 )

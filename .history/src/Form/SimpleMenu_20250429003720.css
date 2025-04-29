@@ -1,0 +1,63 @@
+.menu-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    alignItems: center;
+    background-color: #fc8282;
+    border-radius: 10px;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control {
+    margin-left: 10px;
+}
+
+.quantity-control button {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.quantity {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.wallet-input {
+    margin-top: 20px;
+}
+
+.wallet-input input {
+    margin-left: 10px;
+    width: 150px;
+    padding: 5px;
+}
+
+.buy-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buy-button button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}

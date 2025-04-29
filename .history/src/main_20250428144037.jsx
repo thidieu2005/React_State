@@ -12,11 +12,9 @@ import FGetdtAPI from './FGetdtAPI.jsx'
 import CGetdtAPI from './CGetdtAPI.jsx'
 import CaxiosAPI from './axios/CaxiosAPI.jsx'
 import FuaxiosAPI from './axios/FuaxiosAPI.jsx'
-import MyForm from './Form/form1.jsx'
-import { DiemTB } from './Form/diem.jsx'
-import SimpleMenu from './Form/checkbox.jsx'
+impo
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <  SimpleMenu />
+    < CGetdtAPI />
   </StrictMode>,
 )
