@@ -1,0 +1,82 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.form-container {
+    width: 300px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 78px;
+    margin-right: 50px;
+    margin-left: px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7e8e8;
+}
+
+.product-form input,
+.product-form select,
+.product-form button {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.product-form button {
+    background-color: #f9ec87;
+    color: rgb(1, 1, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.product-section {
+    flex: 1;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.product-card {
+    width: 200px;
+    border: 1px solid #f8b5b5;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.product-card .price {
+    color: red;
+    font-weight: bold;
+}
+
+.product-card .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 0.5rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+.product-card button {
+    background-color: rgb(248, 213, 213);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
